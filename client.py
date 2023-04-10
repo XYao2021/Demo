@@ -5,8 +5,8 @@ import time
 
 
 args = args_parser()
-# SERVER = args.server
-SERVER = '192.168.0.6'
+SERVER = args.server
+# SERVER = '192.168.0.6'
 PORT = args.port
 
 ADDR = (SERVER, PORT)
