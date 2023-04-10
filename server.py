@@ -6,7 +6,8 @@ import time
 
 args = args_parser()
 
-SERVER = socket.gethostbyname(socket.gethostname())
+# SERVER = socket.gethostbyname(socket.gethostname())
+SERVER = args.server
 PORT = args.port
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -44,7 +45,7 @@ while True:
             print('{} Uplink Transmission Successful'.format(com_time))
             time.sleep(wait_time)
             if msg_recv is False:
-                print(f'Closed connection from: {notified_socket}...')
+                print('Closed connection from: {}...'.format(notified_socket))
                 sockets_list.remove(notified_socket)
                 clients.remove(notified_socket)
                 continue
